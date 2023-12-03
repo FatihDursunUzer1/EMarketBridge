@@ -21,7 +21,7 @@ namespace EMarketBridge.StockDataAccess.Repositories
         {
             //_configuration = configuration;
             // client = new MongoClient(_configuration.GetConnectionString("MongoDb"));
-            var connectionString = "mongodb+srv://fatihdursunuzerofficial:im45xZpWunDNvd57@cluster0.gby0lnu.mongodb.net/?retryWrites=true&w=majority";
+            var connectionString = "mongodbConnectionString";
             client = new MongoClient(connectionString);
             stockDbContext = StockDbContext.Create(client.GetDatabase("Stocks"));
         }
